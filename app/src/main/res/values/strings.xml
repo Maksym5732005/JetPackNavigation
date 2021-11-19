@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">NavigationExample</string>
+
+    <string name="login_text_sign_up">Login >> <b>Sign Up</b></string>
+    <string name="login_text_verification">Login >> <b>Verification</b></string>
+
+    <string name="verification_text_code">Login >> X* >> <b>Reset</b></string>
+    <string name="verification_text_back"><b>Login</b> \u003C\u003C</string>
+    <string name="verification_text_start_mark">*X means - remove from back stack</string>
+
+    <string name="reset_password_text_top">Login >> Verification >> <b>Reset Password</b></string>
+    <string name="reset_password_text_login"><b>Login</b> \u003C\u003C</string>
 </resources>
