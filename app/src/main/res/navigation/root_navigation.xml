@@ -6,6 +6,8 @@
 
     <include app:graph="@navigation/oauth_navigation" />
 
+    <include app:graph="@navigation/args_navigation" />
+
     <fragment
         android:id="@+id/fragmentEmpty"
         android:name="com.nav.FragmentEmpty"
