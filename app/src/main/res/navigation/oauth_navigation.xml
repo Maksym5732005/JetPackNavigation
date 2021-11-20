@@ -17,6 +17,9 @@
         <action
             android:id="@+id/push_to_verification"
             app:destination="@id/verificationFragment" />
+        <action
+            android:id="@+id/push_to_args"
+            app:destination="@id/args_navigation" />
     </fragment>
 
     <fragment

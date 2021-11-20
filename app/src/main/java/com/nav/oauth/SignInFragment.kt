@@ -31,5 +31,9 @@ class SignInFragment: Fragment(R.layout.fragment_sign_in) {
         btnVerification.setOnClickListener {
             findNavController().navigate(SignInFragmentDirections.pushToVerification())
         }
+
+        btnArgs.setOnClickListener {
+            findNavController().navigate(SignInFragmentDirections.pushToArgs())
+        }
     }
 }
