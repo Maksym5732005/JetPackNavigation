@@ -9,5 +9,25 @@
         android:id="@+id/argsFragment"
         android:name="com.nav.args.ArgsFragment"
         android:label="ArgsFragment"
-        tools:layout="@layout/fragment_args" />
+        tools:layout="@layout/fragment_args">
+
+        <action
+            android:id="@+id/push_to_argsResult"
+            app:destination="@id/argsWithReturnFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/argsWithReturnFragment"
+        android:name="com.nav.args.ArgsWithReturnFragment"
+        android:label="ArgsWithReturnFragment"
+        tools:layout="@layout/fragment_args_with_return">
+
+        <argument
+            android:name="intArg"
+            app:argType="integer" />
+        <argument
+            android:name="resArg"
+            app:argType="reference" />
+    </fragment>
+
 </navigation>

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nav.args.ArgsFragment"
+    tools:context="com.nav.args.ArgsWithReturnFragment"
     tools:ignore="HardcodedText">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Args"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:text="Args >> Args with back result"
+        android:textAppearance="?textAppearanceBody1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,59 +21,78 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Select what to send:"
+        android:text="Received Args:"
         android:textAppearance="?textAppearanceBody1"
-        app:layout_constraintBottom_toTopOf="@+id/chip_number"
+        app:layout_constraintBottom_toTopOf="@+id/text_int_args"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_number"
-        style="@style/Widget.MaterialComponents.Chip.Choice"
+    <TextView
+        android:id="@+id/text_int_args"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:checked="true"
-        android:text="  77  "
-        app:layout_constraintBottom_toTopOf="@+id/btn_send_args"
-        app:layout_constraintEnd_toStartOf="@+id/chip_color"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_with_args"
+        app:layout_constraintEnd_toStartOf="@+id/view_color_args"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="77" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_color"
-        style="@style/Widget.MaterialComponents.Chip.Choice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <View
+        android:id="@+id/view_color_args"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:text="R.color.teal_200"
-        app:layout_constraintBottom_toTopOf="@+id/btn_send_args"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_with_args"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/chip_number" />
+        app:layout_constraintStart_toEndOf="@id/text_int_args" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_send_args"
+        android:id="@+id/btn_back_with_args"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Send arg"
-        app:layout_constraintBottom_toTopOf="@id/text_open_with_args"
+        android:text="Return with result"
+        app:layout_constraintBottom_toTopOf="@id/text_return_with_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/text_open_with_args"
+        android:id="@+id/text_return_with_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/args_text_open_with_args"
+        android:text="@string/args_result_text_return_info"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back_with_args" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Just Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_send_args" />
+        app:layout_constraintTop_toBottomOf="@+id/text_return_with_result" />
+
+    <TextView
+        android:id="@+id/text_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/args_result_text_back"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
