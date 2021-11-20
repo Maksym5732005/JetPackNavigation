@@ -3,12 +3,12 @@ package com.nav.oauth
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.nav.BaseFragment
 import com.nav.R
 import com.nav.databinding.FragmentSignInBinding
 
-class SignInFragment: Fragment(R.layout.fragment_sign_in) {
+class SignInFragment: BaseFragment(R.layout.fragment_sign_in) {
 
     private lateinit var binding: FragmentSignInBinding
 
