@@ -7,7 +7,6 @@ import androidx.navigation.fragment.findNavController
 import com.nav.R
 import com.nav.databinding.FragmentResetPasswordBinding
 
-
 class ResetPasswordFragment: Fragment(R.layout.fragment_reset_password) {
 
     private lateinit var binding: FragmentResetPasswordBinding
@@ -20,8 +19,12 @@ class ResetPasswordFragment: Fragment(R.layout.fragment_reset_password) {
     }
 
     private fun setupListeners() = with(binding) {
-        btnMain.setOnClickListener {
-            findNavController().navigate(ResetPasswordFragmentDirections.pushToSignIn())
+        btnMainNew.setOnClickListener {
+            findNavController().navigate(ResetPasswordFragmentDirections.pushToSignInNew())
+        }
+
+        btnMainOld.setOnClickListener {
+            findNavController().navigate(ResetPasswordFragmentDirections.pushToSignInOld())
         }
 
         btnBack.setOnClickListener {

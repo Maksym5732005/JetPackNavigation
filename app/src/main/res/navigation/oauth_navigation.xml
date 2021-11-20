@@ -48,7 +48,12 @@
         tools:layout="@layout/fragment_reset_password" >
 
         <action
-            android:id="@+id/push_to_signIn"
+            android:id="@+id/push_to_signIn_new"
             app:destination="@id/signInFragment" />
+
+        <action
+            android:id="@+id/push_to_signIn_old"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="false" /><!-- false - do not destroy popUp fragment -->
     </fragment>
 </navigation>
