@@ -15,4 +15,8 @@
 
     <string name="args_result_text_return_info"><b>Args</b> \u003C\u003C (some data)</string>
     <string name="args_result_text_back"><b>Args</b> \u003C\u003C</string>
+
+    <string name="main_tab_dashboard_title">Dashboard</string>
+    <string name="main_tab_settings_title">Settings</string>
+    <string name="main_tab_profile_title">Profile</string>
 </resources>

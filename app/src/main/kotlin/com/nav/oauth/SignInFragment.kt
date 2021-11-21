@@ -2,7 +2,6 @@ package com.nav.oauth
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.nav.BaseFragment
 import com.nav.R
@@ -21,7 +20,7 @@ class SignInFragment: BaseFragment(R.layout.fragment_sign_in) {
 
     private fun setupListeners() = with(binding) {
         btnMain.setOnClickListener {
-            Toast.makeText(requireContext(), "Not yet implemented", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(SignInFragmentDirections.pushToMain())
         }
 
         btnSignUp.setOnClickListener {
