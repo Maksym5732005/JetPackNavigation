@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (savedInstanceState == null) setHomeScreen(R.id.oauth_navigation)
+        if (savedInstanceState == null) setHomeScreen(R.id.oauth_graph)
     }
 
     private fun setHomeScreen(destination: Int) {

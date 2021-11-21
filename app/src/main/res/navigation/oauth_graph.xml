@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/oauth_navigation"
+    android:id="@+id/oauth_graph"
     app:startDestination="@id/signInFragment">
 
     <fragment
@@ -19,7 +19,7 @@
             app:destination="@id/verificationFragment" />
         <action
             android:id="@+id/push_to_args"
-            app:destination="@id/args_navigation" />
+            app:destination="@id/args_graph" />
     </fragment>
 
     <fragment
