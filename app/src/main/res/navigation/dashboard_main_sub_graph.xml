@@ -4,9 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashboard_main_sub_graph"
     app:startDestination="@id/dashboardFragment">
+
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.nav.main.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+
+        <action
+            android:id="@+id/push_to_details"
+            app:destination="@id/dashboardDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardDetailsFragment"
+        android:name="com.nav.main.dashboard.DashboardDetailsFragment"
+        android:label="fragment_dashboard_details"
+        tools:layout="@layout/fragment_dashboard_details" />
 </navigation>
