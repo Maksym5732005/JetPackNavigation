@@ -9,7 +9,7 @@
 
     <include app:graph="@navigation/args_graph" />
 
-    <include app:graph="@navigation/main_graph" />
+    <include app:graph="@navigation/main_sub_graph" />
 
     <fragment
         android:id="@+id/mainFragment"
