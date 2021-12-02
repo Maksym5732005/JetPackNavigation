@@ -20,6 +20,11 @@
         <action
             android:id="@+id/push_to_args"
             app:destination="@id/args_graph" />
+        <action
+            android:id="@+id/push_to_main"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
