@@ -38,7 +38,7 @@ class ArgsFragment: Fragment(R.layout.fragment_args) {
         numberLiveData?.observe(viewLifecycleOwner) { result ->
             result ?: return@observe
             Toast.makeText(requireContext(), "$result", Toast.LENGTH_SHORT).show()
-            numberLiveData.value = null
+            numberLiveData.value = null // set null or you will get result again.
         }
     }
 }
