@@ -4,7 +4,7 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/dashboard_main_sub_graph">
 
-    <include app:graph="@navigation/dashboard_main_sub_graph" />
-    <include app:graph="@navigation/settings_main_sub_graph" />
-    <include app:graph="@navigation/profile_main_sub_graph" />
+    <include app:graph="@navigation/main_sub_graph_dashboard" />
+    <include app:graph="@navigation/main_sub_graph_settings" />
+    <include app:graph="@navigation/main_sub_graph_profile" />
 </navigation>
