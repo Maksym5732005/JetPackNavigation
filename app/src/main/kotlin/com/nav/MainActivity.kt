@@ -3,7 +3,7 @@ package com.nav
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,14 +15,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun setHomeScreen(destination: Int) {
         val navController = findNavController()
-        val graph = navController.graph
-        graph.startDestination = destination
+        val graph = navController.navInflater.inflate(R.navigation.root_graph)
+        graph.setStartDestination(destination)
         navController.graph = graph
     }
 
 
     private fun findNavController(): NavController {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container)
-        return requireNotNull(navHostFragment).findNavController()
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
+        return navHostFragment.navController
     }
 }
