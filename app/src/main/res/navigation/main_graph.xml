@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_graph"
-    app:startDestination="@id/dashboard_main_sub_graph">
+    app:startDestination="@id/main_sub_graph_dashboard">
 
     <include app:graph="@navigation/main_sub_graph_dashboard" />
     <include app:graph="@navigation/main_sub_graph_settings" />
