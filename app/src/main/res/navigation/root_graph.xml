@@ -15,11 +15,22 @@
         android:id="@+id/mainFragment"
         android:name="com.nav.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/push_to_external_profile_details"
+            app:destination="@id/externalProfileDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragmentEmpty"
         android:name="com.nav.FragmentEmpty"
         android:label="FragmentEmpty" />
+
+    <fragment
+        android:id="@+id/externalProfileDetailsFragment"
+        android:name="com.nav.main.profile.ProfileDetailsFragment"
+        android:label="fragment_profile_details"
+        tools:layout="@layout/fragment_profile_details" />
 
 </navigation>
