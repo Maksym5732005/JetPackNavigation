@@ -54,12 +54,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Return with result"
         app:layout_constraintBottom_toTopOf="@id/text_return_with_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/args_result_btn_text_return_with_result" />
 
     <TextView
         android:id="@+id/text_return_with_result"

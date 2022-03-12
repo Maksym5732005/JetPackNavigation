@@ -36,7 +36,7 @@ class ArgsFragment: Fragment(R.layout.fragment_args) {
         setFragmentResultListener(ARGS_FRAGMENT_REQUEST_KEY) { _: String, bundle: Bundle ->
             val resultNumber = bundle.getInt(ARGS_FRAGMENT_RESULT_NUMBER)
             if (resultNumber != 0) {
-                Toast.makeText(requireContext(), "$resultNumber", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Result received - $resultNumber", Toast.LENGTH_SHORT).show()
             }
         }
     }

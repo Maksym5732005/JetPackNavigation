@@ -13,6 +13,7 @@
 
     <string name="args_text_open_with_args">Args >> <b>Args with back result</b></string>
 
+    <string name="args_result_btn_text_return_with_result">Return with auto result (%d)</string>
     <string name="args_result_text_return_info"><b>Args</b> \u003C\u003C (some data)</string>
     <string name="args_result_text_back"><b>Args</b> \u003C\u003C</string>
 
