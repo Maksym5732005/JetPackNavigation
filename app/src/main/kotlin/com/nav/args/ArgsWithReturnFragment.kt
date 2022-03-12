@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.nav.R
-import com.nav.args.ArgsFragment.Companion.RESULT_NUMBER
 import com.nav.databinding.FragmentArgsWithReturnBinding
 import kotlin.random.Random
 
@@ -29,7 +30,10 @@ class ArgsWithReturnFragment: Fragment(R.layout.fragment_args_with_return) {
     private fun initListeners() = with(binding) {
         btnBackWithArgs.setOnClickListener {
             val number = Random.nextInt(100)
-            findNavController().previousBackStackEntry?.savedStateHandle?.set(RESULT_NUMBER, number)
+            setFragmentResult(
+                ARGS_FRAGMENT_REQUEST_KEY,
+                bundleOf(ARGS_FRAGMENT_RESULT_NUMBER to number)
+            )
             findNavController().popBackStack()
         }
 

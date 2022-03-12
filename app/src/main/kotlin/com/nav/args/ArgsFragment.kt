@@ -4,16 +4,15 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.nav.R
 import com.nav.databinding.FragmentArgsBinding
 
+const val ARGS_FRAGMENT_REQUEST_KEY = "ARGS_FRAGMENT_REQUEST_KEY"
+const val ARGS_FRAGMENT_RESULT_NUMBER = "RESULT_NUMBER"
 
 class ArgsFragment: Fragment(R.layout.fragment_args) {
-
-    companion object {
-        const val RESULT_NUMBER = "RESULT_NUMBER"
-    }
 
     private lateinit var binding: FragmentArgsBinding
 
@@ -34,11 +33,11 @@ class ArgsFragment: Fragment(R.layout.fragment_args) {
     }
 
     private fun registerBackResultListener() {
-        val numberLiveData = findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<Int>(RESULT_NUMBER)
-        numberLiveData?.observe(viewLifecycleOwner) { result ->
-            result ?: return@observe
-            Toast.makeText(requireContext(), "$result", Toast.LENGTH_SHORT).show()
-            numberLiveData.value = null // set null or you will get result again.
+        setFragmentResultListener(ARGS_FRAGMENT_REQUEST_KEY) { _: String, bundle: Bundle ->
+            val resultNumber = bundle.getInt(ARGS_FRAGMENT_RESULT_NUMBER)
+            if (resultNumber != 0) {
+                Toast.makeText(requireContext(), "$resultNumber", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
