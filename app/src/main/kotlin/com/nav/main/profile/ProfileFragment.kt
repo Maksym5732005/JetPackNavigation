@@ -1,19 +1,29 @@
 package com.nav.main.profile
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import base.BaseLifecycleFragment
 import com.nav.R
 import com.nav.databinding.FragmentProfileBinding
 import com.nav.main.MainFragmentDirections
 
 
-class ProfileFragment: Fragment(R.layout.fragment_profile) {
+class ProfileFragment: BaseLifecycleFragment(R.layout.fragment_profile) {
 
     private lateinit var binding: FragmentProfileBinding
+    private val viewModel: ProfileViewModel by viewModels()
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        viewModel.viewModelScope
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
